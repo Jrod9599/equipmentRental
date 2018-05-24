@@ -1,0 +1,14 @@
+[
+  {
+
+    "saw":{
+      "loc": "/assets/images/Futurama-Crew-Leela-Fry-and-Bender.jpg",
+      "price": 3.50
+    },
+    "hammer": {
+      "loc": "/assets/images/fonzy.jpg",
+      "price": 3.75
+    }
+
+  }
+]
