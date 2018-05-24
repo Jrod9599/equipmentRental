@@ -27,18 +27,26 @@
   to { transform: rotate(360deg); }
 }
 
-.banner{
-  max-width: 100%;
+.loginfrm, .registerfrm {
+  width: 20%;
+  text-align: center;
+  position: relative;
+  left: 40%;
 }
 
-.navbar{
-  margin-bottom: 0px;
+.form-group.contact {
+  text-align: left;
+  position: relative;
+  padding-left: 10%;
 }
 
+.contactfrm {
+  width: 20%;
+}
 
-.bannerImages{
-    max-height: 500px;
-    margin: auto;
+.msg {
+  width: 40%;
+  height: 10%;
 }
 
 .carousel-caption{
@@ -47,4 +55,3 @@
     top: 13%;
     right: 49%;
 }
-
