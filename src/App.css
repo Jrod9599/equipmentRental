@@ -35,17 +35,16 @@
   margin-bottom: 0px;
 }
 
-.bannerText {
+
+.bannerImages{
+    max-height: 500px;
+    margin: auto;
+}
+
+.carousel-caption{
+    color: #9d9d9d;
     position: absolute;
     top: 13%;
     right: 49%;
 }
 
-.bannerContainer {
-    position: relative;
-    text-align: center;
-    color: white;
-    max-height: 550px;
-    height: auto;
-    overflow: hidden;
-}
