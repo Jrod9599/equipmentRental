@@ -27,6 +27,8 @@
   to { transform: rotate(360deg); }
 }
 
+/*$$$$$$$$$$$$$$$$ Login/Registration $$$$$$$$$$$$$$$$$$$$$$$*/
+
 .loginfrm, .registerfrm {
   width: 20%;
   text-align: center;
@@ -34,6 +36,7 @@
   left: 40%;
 }
 
+/*$$$$$$$$$$$$$$$$ Contact Us $$$$$$$$$$$$$$$$$$$$$$$*/
 .form-group.contact {
   text-align: left;
   position: relative;
@@ -48,10 +51,15 @@
   width: 40%;
   height: 10%;
 }
-
+/*$$$$$$$$$$$$$$$$ Banner $$$$$$$$$$$$$$$$$$$$$$$*/
 .carousel-caption{
     color: #9d9d9d;
     position: absolute;
     top: 13%;
     right: 49%;
+}
+
+.bannerImages{
+    max-height: 500px;
+    margin: auto;
 }
