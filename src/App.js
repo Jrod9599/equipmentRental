@@ -13,32 +13,21 @@ import ThumbContainer from "./thumbContainer";
 
 class App extends Component {
 
-<<<<<<< HEAD
-    render() {
-        return (
-            <Router>
-                <div className="App">
-                    <Route path="/" component={BootstrapNavBar}/>
-                    <ThumbContainer/>
-                </div>
-            </Router>
-        );
-    }
-=======
   render() {
     return (
       <Router>
         <div className="App">
           <Route path="/" component={BootstrapNavBar}/>
           <Route exact path="/" component={Banner} />
-          <Route exact path="/login" component={Login}/>
+    <ThumbContainer/>
+
+    <Route exact path="/login" component={Login}/>
           <Route exact path="/register" component={Register}/>
           <Route exact path="/contact" component={Contact}/>
         </div>
       </Router>
     );
   }
->>>>>>> 02302172defb1ab4f943d05fd16d853349f9c8a7
 }
 
 export default App;
