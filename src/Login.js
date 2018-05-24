@@ -9,15 +9,15 @@ class Login extends Component{
 	<h1>Login Page</h1>
 	  <div className="form-group">
 	    <label for="email">Email address:</label>
-	    <input type="email" className="form-control" id="email" />
+	    <input type="email" className="form-control loginfrm" id="email" />
 	  </div>
 
 	  <div className="form-group">
 	    <label for="pwd">Password:</label>
-	    <input type="password" className="form-control" id="pwd" />
+	    <input type="password" className="form-control loginfrm" id="pwd" />
 	  </div>
 
-	  <button type="submit" className="btn btn-default">Submit</button>
+	  <button type="submit" className="btn btn-default">Log In</button>
 	</form>
     ) 
   }

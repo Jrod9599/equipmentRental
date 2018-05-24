@@ -27,7 +27,7 @@
   to { transform: rotate(360deg); }
 }
 
-#email, #pwd{
+.loginfrm, .registerfrm{
   width: 20%;
     text-align: center;
     position: relative;
