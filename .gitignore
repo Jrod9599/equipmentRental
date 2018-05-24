@@ -3,6 +3,10 @@
 # dependencies
 /node_modules
 
+#intellijfiles
+.idea/
+*.iml
+
 # testing
 /coverage
 
