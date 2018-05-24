@@ -10,23 +10,25 @@ import Banner from './banner';
 import Location from './Location';
 
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import ThumbContainer from "./thumbContainer";
 
 class App extends Component {
 
-  render() {
-    return (
-      <Router>
-        <div className="App">
-          <Route path="/" component={BootstrapNavBar}/>
-          <Route exact path="/" component={Banner} />
-          <Route exact path="/locations" component={Location} />
-          <Route exact path="/login" component={Login}/>
-          <Route exact path="/register" component={Register}/>
-          <Route exact path="/contact" component={Contact}/>
-        </div>
-      </Router>
-    );
-  }
+    render() {
+        return (
+            <Router>
+                <div className="App">
+                    <Route path="/" component={BootstrapNavBar}/>
+                    <Route exact path="/" component={Banner}/>
+                    <ThumbContainer/>
+                    <Route exact path="/locations" component={Location}/>
+                    <Route exact path="/login" component={Login}/>
+                    <Route exact path="/register" component={Register}/>
+                    <Route exact path="/contact" component={Contact}/>
+                </div>
+            </Router>
+        );
+    }
 }
 
 export default App;
