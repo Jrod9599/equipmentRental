@@ -11,6 +11,7 @@ class Register extends Component{
   		buttonText: "Submit"
   	}
   	this.passwordCheck = this.passwordCheck.bind(this);
+  	this.handleRegister = this.handleRegister.bind(this);
   }
 
   passwordCheck(event){
@@ -35,9 +36,22 @@ class Register extends Component{
 
   }
 
+  handleRegister(event){
+  	event.preventDefault();
+  	var btnText = this.state.buttonText;
+  	
+  	if(btnText === "Submit"){
+  		console.log("do stuff with database");
+  	}
+  	else{
+  		console.log("pwd dont match");
+  	}
+
+  }
+
   render(){
     return(
-	<form>
+	<form onSubmit={this.handleRegister}>
 	<h1>Register Page</h1>
 	  
 	  <div className="form-group">
