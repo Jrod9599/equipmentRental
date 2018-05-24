@@ -3,11 +3,19 @@
 # dependencies
 /node_modules
 
+#intellijfiles
+.idea/
+*.iml
+
 # testing
 /coverage
 
 # production
 /build
+
+#intellij
+.idea/
+.iml
 
 # misc
 .DS_Store
