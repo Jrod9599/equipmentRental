@@ -27,9 +27,24 @@
   to { transform: rotate(360deg); }
 }
 
-.loginfrm, .registerfrm{
+.loginfrm, .registerfrm {
   width: 20%;
-    text-align: center;
-    position: relative;
-    left: 40%;
+  text-align: center;
+  position: relative;
+  left: 40%;
+}
+
+.form-group.contact {
+  text-align: left;
+  position: relative;
+  padding-left: 10%;
+}
+
+.contactfrm {
+  width: 20%;
+}
+
+.msg {
+  width: 40%;
+  height: 10%;
 }
