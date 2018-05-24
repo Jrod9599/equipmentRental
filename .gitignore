@@ -13,6 +13,10 @@
 # production
 /build
 
+#intellij
+.idea/
+.iml
+
 # misc
 .DS_Store
 .env.local
