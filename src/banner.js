@@ -22,7 +22,7 @@ class Banner extends Component{
     </div>
 
     <div className="item">
-      <img className="bannerImages" src="http://iphonerepairscalgary.com/wp-content/uploads/2017/12/shining-home-depot-garden-tiller-rental-edmonton-outdoor-decoration.jpg" alt="garden tiller" />
+      <img className="bannerImages" src="https://www.worx.com/media/wysiwyg/worx-chainsaws.1485355743.jpg" alt="garden tiller" />
         <div className="carousel-caption">
           <h3>Garden Tiller Rental</h3>
           <p>shining garden</p>
@@ -30,7 +30,7 @@ class Banner extends Component{
     </div>
 
     <div className="item">
-      <img className="bannerImages" src="http://iphonerepairscalgary.com/wp-content/uploads/2017/12/stylish-home-depot-garden-tiller-tillers-cultivators-outdoor-power-equipment-the.jpg" alt="cultivators" />
+      <img className="bannerImages" src="https://i.ytimg.com/vi/otaMj_L946g/maxresdefault.jpg" alt="cultivators" />
         <div className="carousel-caption">
           <h3>Cultivator</h3>
           <p>outdoor power garden tiller</p>

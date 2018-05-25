@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
 import axios from 'axios'
-// import ItemBox from "./itemBox";
-import ImageThumb from "./itemBox";
+ import ItemBox from "./itemBox";
+// import ImageThumb from "./itemBox";
 class ThumbContainer extends Component {
 
     constructor() {
         super()
 
         this.state = {
-            inven: []
+            inventory: []
         }
 
     }
@@ -18,9 +18,9 @@ class ThumbContainer extends Component {
 
 
         axios.get('/inventory.json').then(response => {
-            console.log(response)
+          //  console.log(response)
             this.setState({
-                inven: response.data["0"]
+                inventory: response.data.inventory
             })
 
         })
@@ -30,19 +30,19 @@ class ThumbContainer extends Component {
     render() {
 
         let thumbs = []
-              console.log(this.state.inven)
+          //    console.log(this.state.inventory)
         let i=0
-        for (let key in this.state.inven){
+        for (let key in this.state.inventory){
 
-            thumbs.push(<ImageThumb entry={this.state.inven[key]} key={i}/>)
+            thumbs.push(<ItemBox id={key} entry={this.state.inventory[key]} key={i}/>)
             i++
 
         }
 
 
 
-/*        const thumbs = this.state.inven.map((item, index) => {
-      //      console.log(this.state.inven["0"])
+/*        const thumbs = this.state.inventory.map((item, index) => {
+      //      console.log(this.state.inventory["0"])
             console.log(item)
 
 
