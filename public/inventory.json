@@ -1,0 +1,15 @@
+
+  {
+    "inventory": {
+      "12345": {
+        "loc": "/assets/images/Futurama-Crew-Leela-Fry-and-Bender.jpg",
+        "thumb": "/assets/thumbnail/Futurama-Crew-Leela-Fry-and-Bender_tn.jpg",
+        "price": 3.50
+      },
+      "67890": {
+        "loc": "/assets/images/fonzy.jpg",
+        "thumb": "/assets/thumbnail/fonzy_tn.jpg",
+        "price": 3.75
+      }
+    }
+  }
