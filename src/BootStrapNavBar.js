@@ -6,7 +6,7 @@ class BootstrapNavBar extends Component{
 
    return(
 
-     <nav className="navbar navbar-inverse">
+     <nav className="navbar navbar-inverse navbar-fixed-top">
        <div className="container-fluid">
          <div className="navbar-header">
            <Link to="/" className="navbar-brand">Equipment Rental</Link>
