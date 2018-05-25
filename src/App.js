@@ -20,7 +20,7 @@ class App extends Component {
                 <div className="App">
                     <Route path="/" component={BootstrapNavBar}/>
                     <Route exact path="/" component={Banner}/>
-                    <ThumbContainer/>
+                    
                     <Route exact path="/locations" component={Location}/>
                     <Route exact path="/login" component={Login}/>
                     <Route exact path="/register" component={Register}/>
