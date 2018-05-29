@@ -3,6 +3,19 @@ import {Link} from 'react-router-dom';
 import "./App.css";
 
 class BootstrapNavBar extends Component{
+
+  constructor(){
+      super();
+      this.handleLogout = this.handleLogout.bind(this);
+  }
+
+  handleLogout(event){
+    event.preventDefault();
+    localStorage.clear();
+    this.props.history.push("/");
+  }
+
+
 	render(){
 
     const loggedIn = localStorage.token
@@ -20,7 +33,7 @@ class BootstrapNavBar extends Component{
               ?
             <li><Link to="/login">Login</Link></li>
             :
-            <li><Link to="/logout">Logout</Link></li>
+            <li><Link to="/logout" onClick={this.handleLogout}>Logout</Link></li>
             }
             {
               loggedIn === undefined

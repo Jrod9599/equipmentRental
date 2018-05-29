@@ -42,7 +42,8 @@ class Register extends Component{
   	
   	if(btnText === "Submit"){
   		console.log("do stuff with database");
-      alert("You have been registered and logged in.");
+      //alert("You have been registered and logged in.");
+      localStorage.token = "asdfj";
       this.props.history.push("/");
   	}
   	else{

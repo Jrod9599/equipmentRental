@@ -25,7 +25,7 @@ class Contact extends Component{
               <label for="msg">Message:</label>
             </div>
             <div className="form-group contact">
-              <textarea rows="10" cols="50" className="msg" form="usrform"> </textarea>
+              <textarea rows="5" cols="50" className="msg" form="usrform"> </textarea>
             </div>
         	<button type="submit" className="btn btn-primary">Submit</button>
           </div>
