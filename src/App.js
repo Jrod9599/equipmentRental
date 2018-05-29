@@ -36,6 +36,7 @@ class App extends Component {
                       <Route exact path="/register" component={Register}/>
                       <Route exact path="/contact" component={Contact}/>
                       <Route path={'/product/:productid'} component={ItemPage}/>
+                      <Route path={'/Rent/:productid'} component={Rent} />
                    </div>
                     <Route component={Footer}/>
 
