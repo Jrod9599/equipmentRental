@@ -50,7 +50,7 @@ body {
 }
 
 
-.clogin, .cregister, .ccontact{
+/*.clogin, .cregister, .ccontact{
   margin : -1.4em 0 0 0;
   width : 100%;
   min-height: 43.52em;
@@ -64,7 +64,13 @@ body {
     min-height: 43.52em;
     background-repeat: no-repeat;
     background: linear-gradient(blue, cyan, white);
+}*/
 
+.rentForm {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
 }
 
 .cform, .rform, .contactForm{
@@ -73,13 +79,18 @@ body {
   position: relative;
   left: 31%;
   padding: 2% 5% 2.5%;
-  margin-top: 8%;
+  margin-top: 3%;
 
+  border: solid 4px black;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
   -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card, .cart{
+  font-size:20px;
 }
 .rentform{
     border: solid 2px gray;
@@ -104,7 +115,7 @@ body {
 @media only screen and (max-width: 700px){
   .container1 {
     position: relative;
-    top: 16em;
+    top: 12em;
   }
 
   .clogin, .cregister, .ccontact {
@@ -112,6 +123,7 @@ body {
   }
 
   .cform, .rform, .contactForm {
+    margin-top: 5%;
     width: 90%;
     left: 5%;
   }

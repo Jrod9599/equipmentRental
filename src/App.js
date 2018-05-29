@@ -11,6 +11,7 @@ import GoogleMap from './GoogleMap';
 import StoreLocator from './StoreLocator';
 import Footer from './footer';
 import Rent from './Rent';
+import Approved from './Approved';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import ThumbContainer from "./thumbContainer";
 import ItemPage from "./itempage";
@@ -31,12 +32,13 @@ class App extends Component {
                       <Route exact path="/" component={ThumbContainer}/>
                       <Route exact path="/locations" component={Locations} />
                         <Route path={'/product/:productid'} component={ItemPage}/>
-                        <Route path={'/Rent/:productid'} component={Rent} />
+                        <Route path={'/checkout'} component={Rent} />
                     </div>
                     <div className="container1"> 
                       <Route exact path="/login" component={Login}/>
                       <Route exact path="/register" component={Register}/>
                       <Route exact path="/contact" component={Contact}/>
+                      <Route exact path="/approved" component={Approved}/>
 
                    </div>
                     <Route component={Footer}/>
