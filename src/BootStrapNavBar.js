@@ -6,7 +6,7 @@ class BootstrapNavBar extends Component{
 	render(){
 
    return(
-
+<div className={'row'}>
      <nav className="navbar navbar-inverse navbar-fixed-top">
        <div className="container-fluid">
          <div className="navbar-header">
@@ -20,6 +20,7 @@ class BootstrapNavBar extends Component{
          </ul>
        </div>
      </nav>
+</div>
    )
  }
 }

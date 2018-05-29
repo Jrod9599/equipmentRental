@@ -44,6 +44,9 @@
   position: relative;
   left: 40%;
 }
+body {
+  padding-top: 65px;
+}
 
 .container1 {
   margin : -1.4em 0 0 0;
@@ -100,8 +103,18 @@
     top: 13%;
     right: 49%;
 }
-
 .bannerImages{
     max-height: 500px;
     margin: auto;
 }
+
+#map {
+  height: 100%;
+}
+.storeLocator{
+  float: left;
+  height: 400px;
+  width: 30%;
+  margin-left: 5%
+}
+
