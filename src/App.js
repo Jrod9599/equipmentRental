@@ -22,19 +22,18 @@ class App extends Component {
             <Router>
                 <div className="App">
                     <Route path="/" component={BootstrapNavBar}/>
-                    <div className="pulldown">
-                      <Route exact path="/" component={Banner}/>
-                      <div className='container'>
-                        <Route exact path="/" component={ThumbContainer}/>
-                        <Route exact path="/locations" component={StoreLocator} />
-                        <Route exact path="/locations" component={GoogleMap} />
-                        <Route exact path="/login" component={Login}/>
-                        <Route exact path="/register" component={Register}/>
-                        <Route exact path="/contact" component={Contact}/>
-                        <Route path={'/product/:productid'} component={ItemPage}/>
-                      </div>
-                      <Route component={Footer}/>
-                    </div>
+
+                    <Route exact path="/" component={Banner}/>
+                    <div className={'container1 '}>
+                    <Route exact path="/" component={ThumbContainer}/>
+                    <Route exact path="/locations" component={StoreLocator} />
+                    <Route exact path="/locations" component={GoogleMap} />
+                    <Route exact path="/login" component={Login}/>
+                    <Route exact path="/register" component={Register}/>
+                    <Route exact path="/contact" component={Contact}/>
+                    <Route path={'/product/:productid'} component={ItemPage}/>
+                </div>
+                    <Route component={Footer}/>
 
                 </div>
             </Router>
