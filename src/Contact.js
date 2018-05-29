@@ -6,9 +6,10 @@ class Contact extends Component{
 
   render(){
     return(
-      <div>
-      	<form id="usrform">
-        	<h1>Contact Us</h1>
+      <div className="container ccontact">
+      	<form id="usrform" className="contact">
+        <div className="contactForm">
+        	<h1 className="contactH1">Contact Us</h1>
 
         	  <div className="form-group contact">
         	    <label for="name">Name:</label>
@@ -24,9 +25,10 @@ class Contact extends Component{
               <label for="msg">Message:</label>
             </div>
             <div className="form-group contact">
-              <textarea rows="10" cols="50" className="msg" form="usrform"> </textarea>
+              <textarea rows="5" cols="50" className="msg" form="usrform"> </textarea>
             </div>
         	<button type="submit" className="btn btn-primary">Submit</button>
+          </div>
       	</form>
 
       </div>
