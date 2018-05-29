@@ -50,13 +50,20 @@ body {
 }
 
 
-.clogin, .cregister, .ccontact, .crent{
+.clogin, .cregister, .ccontact{
   margin : -1.4em 0 0 0;
   width : 100%;
   min-height: 43.52em;
   background-repeat: no-repeat;
   background: linear-gradient(blue, cyan, white);
 
+}
+.crent{
+    margin : -1.4em 0 0 0;
+    width : 100%;
+    min-height: 43.52em;
+    background-repeat: no-repeat;
+    background: linear-gradient(blue, cyan, white);
 }
 
 .rentForm {
@@ -79,6 +86,20 @@ body {
   border-radius: 2px;
   -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.rentform{
+    border: solid 2px gray;
+    background-color: white;
+    width: 60%;
+    position: relative;
+    padding: 2% 5% 2.5%;
+    margin-top: 8%;
+
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 .msg {
