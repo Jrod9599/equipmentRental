@@ -24,8 +24,7 @@ class App extends Component {
                 <div className="App">
                     <Route path="/" component={BootstrapNavBar}/>
                     <Route exact path="/" component={Banner}/>
-
-                    <div className={'container '}>
+                    <div className={'container1 '}>
                     <Route exact path="/" component={ThumbContainer}/>
                     <Route exact path="/locations" component={StoreLocator} />
                     <Route exact path="/locations" component={GoogleMap} />
