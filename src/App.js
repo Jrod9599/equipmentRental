@@ -18,6 +18,10 @@ import ItemPage from "./itempage";
 import Locations from './Locations'
 
 class App extends Component {
+    constructor(){
+        super()
+
+    }
 
 
     render() {
