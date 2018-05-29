@@ -30,15 +30,14 @@ class App extends Component {
                     <div className={'container'}>
                       <Route exact path="/" component={ThumbContainer}/>
                       <Route exact path="/locations" component={Locations} />
-                     {/*} <Route exact path="/locations" component={StoreLocator} />
-                      <Route exact path="/locations" component={GoogleMap} />*/}
+                        <Route path={'/product/:productid'} component={ItemPage}/>
+                        <Route path={'/Rent/:productid'} component={Rent} />
                     </div>
                     <div className="container1"> 
                       <Route exact path="/login" component={Login}/>
                       <Route exact path="/register" component={Register}/>
                       <Route exact path="/contact" component={Contact}/>
-                      <Route path={'/product/:productid'} component={ItemPage}/>
-                      <Route path={'/Rent/:productid'} component={Rent} />
+
                    </div>
                     <Route component={Footer}/>
 
