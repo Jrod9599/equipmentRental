@@ -167,6 +167,9 @@ body {
     position: relative;
     top: 70px;
 }
-/*.locations{
-    padding-top: 70px;
-}*/
+.googleMap{
+  float: right;
+height: 400px;
+width: 60%;
+
+}
