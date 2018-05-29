@@ -6,8 +6,18 @@ import StoreLocator from './StoreLocator'
 function Locations(){
 	return(
 		<div className="locations container">
-			<StoreLocator />
-			<GoogleMap />
+			<div className={'row'}>
+				<div className={'col-md-6'}>
+                    <StoreLocator />
+
+				</div>
+				<div className={'col-md-6'}>
+
+                    <GoogleMap />
+
+				</div>
+			</div>
+
 			
 		</div>
 		)
