@@ -4,17 +4,34 @@ import './App.css'
 import {withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 
 const MyMapComponent = withScriptjs(withGoogleMap((props) =>
-  <GoogleMap
-    defaultZoom={8}
-    defaultCenter={{ lat:33.8660582, lng:-84.5737936  }}
-  >
-    {props.isMarkerShown && <Marker position={{ lat:33.8660582, lng:-84.5737936 }} />}
-  </GoogleMap>
+    <GoogleMap
+        defaultZoom={8}
+        defaultCenter={{ lat:33.8660582, lng:-84.5737936  }}
+    >
+        {props.isMarkerShown && <Marker position={{ lat:33.8660582, lng:-84.5737936 }} />}
+    </GoogleMap>
 ))
+
 
 class Location extends Component{
 
-  render(){
+
+
+
+    constructor(){
+        super()
+
+
+
+    }
+
+
+
+
+
+
+
+    render(){
     return(
 	  <MyMapComponent
 	  isMarkerShown

@@ -45,6 +45,10 @@ body{
   margin: 0;
   padding-bottom: 1em;
 }
+body {
+  padding-top: 65px;
+}
+
 
 .clogin, .cregister, .ccontact {
   margin : -1.4em 0 0 0;
