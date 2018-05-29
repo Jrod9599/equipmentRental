@@ -1,3 +1,6 @@
+body{
+  padding-top: 65px;
+}
 .App {
   text-align: center;
 }
@@ -116,6 +119,7 @@
 
 .storeLocator{
   float: left;
+
   height: 400px;
   width: 30%;
   margin-left: 5%
@@ -125,4 +129,6 @@
     position: relative;
     top: 70px;
 }
-
+/*.locations{
+    padding-top: 70px;
+}*/
