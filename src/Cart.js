@@ -7,42 +7,66 @@ class Cart extends Component{
 	constructor(){
 		super();
 		this.state={
-			total : 0
+			total : 0,
+			names: []
 		}
+		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
+	componentDidMount(){
 
-
-	cartItemTotal(event){
-		event.preventDefault();
 		const tempcart = JSON.parse(localStorage.getItem('myCart'));
-  		console.log(tempcart);
-  		var cartTotal = 0;
-  		tempcart.map((item)=>{
-  			cartTotal = cartTotal + item.total;
-  		})
+  		
+		var cartTotal = 0;
+		for(let key in tempcart){
+			// console.log(tempcart[key])
+			cartTotal += tempcart[key].total;
+		}
+	
   		this.setState({
   			total: cartTotal
   		})
+	}
 
-  		tempcart.map((item)=>{
-  			return(
-  				<div>
-  					<h3> {item.name} {item.total} </h3>
-  					<img src={item.icon} />
-  				</div>
-  			)
-  		})
+	handleSubmit(event){
+		event.preventDefault();
+		
+		this.props.history.push("/checkout");
 
 	}
 
   	render(){
+		const tempcart = JSON.parse(localStorage.getItem('myCart'));
+
+		// let keys = [];
+		// for(let key in tempcart){
+		// 	keys.push(<h1>{tempcart[key].total}</h1>);
+		// }
+
+		let keys = [];
+		for(let key in tempcart){
+			keys.push(key);
+		}
+
+		const items = keys.map((x)=>{
+			return (
+
+					<div className="item">
+						<img width="200px"src={tempcart[x].icon} />
+						Item: {tempcart[x].name} Price: {tempcart[x].total}
+					</div>
+
+				)
+		})
+
+	//	console.log(items)
 	    return(
 	    	<div>
 	    		<h2>Items</h2>
-	    		{this.cartItemTotal}
-
-	    		{this.state.total}
+	    		{items}
+	    		<hr/>
+	    		<h2>Total: {this.state.total}</h2>
+	    		<button type="submit" onClick={this.handleSubmit} className="btn btn-primary">CheckOut</button>
 	    	</div>
 	    ) 
 	  }
