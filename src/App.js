@@ -8,9 +8,9 @@ import Register from './Register';
 import Contact from './Contact';
 import Banner from './banner';
 import GoogleMap from './GoogleMap';
-import StoreLocator from './StoreLocator'
-
-import Footer from './footer'
+import StoreLocator from './StoreLocator';
+import Footer from './footer';
+import Rent from './Rent';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import ThumbContainer from "./thumbContainer";
 import ItemPage from "./itempage";
@@ -32,12 +32,14 @@ class App extends Component {
                       <Route exact path="/locations" component={Locations} />
                      {/*} <Route exact path="/locations" component={StoreLocator} />
                       <Route exact path="/locations" component={GoogleMap} />*/}
+                    </div>
+                    <div className="container1"> 
                       <Route exact path="/login" component={Login}/>
                       <Route exact path="/register" component={Register}/>
                       <Route exact path="/contact" component={Contact}/>
                       <Route path={'/product/:productid'} component={ItemPage}/>
+                      <Route path={'/Rent/:productid'} component={Rent} />
                    </div>
-                   
                     <Route component={Footer}/>
 
                 </div>

@@ -50,7 +50,7 @@ body {
 }
 
 
-.clogin, .cregister, .ccontact {
+.clogin, .cregister, .ccontact, .crent{
   margin : -1.4em 0 0 0;
   width : 100%;
   min-height: 43.52em;
@@ -59,7 +59,7 @@ body {
 
 }
 
-.cform, .rform, .contactForm {
+.cform, .rform, .contactForm, .rentform{
   background-color: white;
   width: 40%;
   position: relative;
