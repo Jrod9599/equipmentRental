@@ -2,7 +2,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
 import axios from "axios/index";
-import Location from "./GoogleMap";
 import GoogleMap from './GoogleMap';
 
 
@@ -45,8 +44,35 @@ class ItemPage extends Component {
                         <li className="list-group-item">this is the name</li>
                         <li className="list-group-item">this is the price</li>
                         <li className="list-group-item">this is some other info</li>
-                        <button type="button" className="btn btn-primary navbar-btn">rent it!</button>
+
+                        <form>
+                            <div className={'form-row'}>
+
+                                <div className={'form-group col-md-5'}>
+                                    <label htmlFor="from">From: </label>
+                                    <input type={'date'} id={'from'}/>
+
+                                </div>
+                                <div className={'form-group col-md-5'}>
+                                        <label htmlFor="to">To: </label>
+                                        <input type={'date'} id={'to'}/>
+
+
+
+                                </div>
+                                <div className={'col-md-2'}>
+
+                                    <button type="button" className="btn btn-primary navbar-btn">rent me</button>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+
                     </ul>
+
                 </div>
                 <div className={'col-md-6'}>
                     <GoogleMap/>

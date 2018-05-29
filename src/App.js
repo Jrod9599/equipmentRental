@@ -27,7 +27,7 @@ class App extends Component {
 
                     <Route exact path="/" component={Banner}/>
                     
-                    <div className={'container1'}>
+                    <div className={'container'}>
                       <Route exact path="/" component={ThumbContainer}/>
                       <Route exact path="/locations" component={Locations} />
                      {/*} <Route exact path="/locations" component={StoreLocator} />
