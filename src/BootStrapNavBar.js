@@ -20,7 +20,7 @@ class BootstrapNavBar extends Component{
 
     const loggedIn = localStorage.token
    return(
-
+<div className={'row'}>
      <nav className="navbar navbar-inverse navbar-fixed-top">
        <div className="container-fluid">
          <div className="navbar-header">
@@ -42,10 +42,15 @@ class BootstrapNavBar extends Component{
               :
               <spam />
             }
-		      	<li><Link to="/contact">Contact Us</Link></li>           
+		      	<li><Link to="/contact">Contact Us</Link></li>
+            </ul>
+          <ul className="nav navbar-nav navbar-right"> 
+            <li><Link to="/cart"><i class="fa fa-shopping-cart cart" aria-hidden="true"></i>
+            </Link></li>           
          </ul>
        </div>
      </nav>
+</div>
    )
  }
 }
