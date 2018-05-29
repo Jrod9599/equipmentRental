@@ -32,6 +32,8 @@ class App extends Component {
                       <Route exact path="/locations" component={Locations} />
                      {/*} <Route exact path="/locations" component={StoreLocator} />
                       <Route exact path="/locations" component={GoogleMap} />*/}
+                    </div>
+                    <div className="container1"> 
                       <Route exact path="/login" component={Login}/>
                       <Route exact path="/register" component={Register}/>
                       <Route exact path="/contact" component={Contact}/>
