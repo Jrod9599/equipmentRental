@@ -36,7 +36,19 @@ class ItemPage extends Component {
     handleRentMe() {
         console.log('sanity check')
 
-        const total = this.state.product.price * 7;
+        const oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+        const firstDate = new Date(this.refs.from.value);
+
+        const secondDate = new Date(this.refs.to.value);
+
+
+        const diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
+
+        console.log(diffDays)
+
+
+
+        const total = this.state.product.price * diffDays;
         const entry = {
             'name': 'somename',
             'total': total,
@@ -57,6 +69,12 @@ class ItemPage extends Component {
 
         localStorage.setItem('myCart', JSON.stringify(tempcart))
         console.log(JSON.parse(localStorage.getItem('myCart')))
+
+        alert('added to cart')
+        console.log(this.props)
+        this.props.history.push('/')
+
+
     }
 
 
@@ -67,7 +85,7 @@ class ItemPage extends Component {
 
                 <div className={'col-md-6'}>
 
-                    <img src={this.state.product.loc} alt={'notfound'} width={'600px'}/>
+                    <img src={this.state.product.loc} alt={'notfound'} width={'300px'}/>
                     <ul className="item name">
                         <li className="list-group-item">this is the name</li>
                         <li className="list-group-item">this is the price</li>
@@ -78,12 +96,12 @@ class ItemPage extends Component {
 
                                 <div className={'form-group col-md-5'}>
                                     <label htmlFor="from">From: </label>
-                                    <input type={'date'} id={'from'}/>
+                                    <input type={'date'} id={'from'} ref={'from'}/>
 
                                 </div>
                                 <div className={'form-group col-md-5'}>
                                     <label htmlFor="to">To: </label>
-                                    <input type={'date'} id={'to'}/>
+                                    <input type={'date'} id={'to'} ref={'to'}/>
 
 
                                 </div>

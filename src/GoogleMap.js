@@ -46,7 +46,7 @@ const markers = stores.map(store=>{
 
     return (
       <div className='googleMap'>
-      <Map google={this.props.google} zoom={14} style={{width: `40%`, height: `100%`}} initialCenter={{
+      <Map google={this.props.google} zoom={14} style={{width: `100%`, height: `100%`}} initialCenter={{
             lat:33.8660582,
             lng:-84.5737936
           }}>
