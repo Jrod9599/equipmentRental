@@ -10,6 +10,21 @@
         "loc": "/assets/images/fonzy.jpg",
         "thumb": "/assets/thumbnail/fonzy_tn.jpg",
         "price": 3.75
+      },
+      "1001": {
+        "loc": "/assets/images/carpetcleaning.jpg",
+        "thumb": "/assets/thumbnail/carpetcleaning_tn.jpg",
+        "price": 3.75
+      },
+      "1002": {
+        "loc": "/assets/images/steamer.jpg",
+        "thumb": "/assets/thumbnail/steamer_tn.jpg",
+        "price": 3.75
+      },
+      "1003": {
+        "loc": "/assets/images/sawthing.jpg",
+        "thumb": "/assets/thumbnail/sawthing_tn.jpg",
+        "price": 3.75
       }
     }
   }
