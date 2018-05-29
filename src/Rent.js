@@ -7,7 +7,7 @@ class Rent extends Component{
   constructor(){
   	super();
   	this.state = {
-        usStates: <select id={'state'}>
+        usStates: <select className="form-control" id={'state'}>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
             <option value="AZ">Arizona</option>
@@ -64,11 +64,16 @@ class Rent extends Component{
 
   }
 
+  handleSubmit(event){
+    event.preventDefault();
+    this.props.history.push("/approved");
+  }
+
   render(){
     return(
       <div>
-        <h1>Rent Item</h1>
-        <form className="rent">
+        <h1>Checkout</h1>
+        <form className="rent" onSubmit={this.handleSubmit}>
             <div className="rentform container">
               <div className="col-lg-6"> 
                 <h3>Billing Information</h3>
@@ -77,15 +82,15 @@ class Rent extends Component{
                   <input type="text" className="form-control" id="fullname" required/>
                 </div>
                 <div>
-                  <label htmlFor="email"> Email  </label>
+                  <label htmlFor="email"><i className="fa fa-envelope"></i> Email  </label>
                   <input type="text" id="email" className="form-control" name="email" placeholder="john@example.com" />
                 </div>
                 <div>
-                  <label htmlFor="adr">Address </label>
+                  <label htmlFor="adr"><i className="fa fa-address-card-o"></i> Address </label>
                   <input type="text" id="adr" className="form-control" name="address" placeholder="542 W. 15th Street" />
                 </div>
                 <div>
-                  <label htmlFor="city">City</label>
+                  <label htmlFor="city"><i className="fa fa-institution"></i> City</label>
                   <input type="text" id="city" className="form-control" name="city" placeholder="New York" />
                 </div>
                 <div>
@@ -99,6 +104,12 @@ class Rent extends Component{
               </div>
               <div className="col-lg-6">
                 <h3>Payment</h3>
+                <div>
+                  <i className="fa fa-cc-amex card"></i> 
+                  <i className="fa fa-cc-mastercard card"></i> 
+                  <i className="fa fa-cc-visa card"></i> 
+                  <i className="fa fa-cc-discover card"></i>
+                </div>
                 <label htmlFor="cname">Name on Card</label>
                 <input type="text" id="cname" className="form-control" name="cardname" placeholder="John More Doe"/>
                 <label htmlFor="ccnum">Credit card number</label>
@@ -115,6 +126,7 @@ class Rent extends Component{
                   </div>
               </div>
             </div>
+            <button type="submit" className="btn btn-primary">Submit Payment</button>
         </form>
       </div>
     )
