@@ -156,10 +156,9 @@ body {
 }
 
 .storeLocator{
-  float: left;
+  float: right;
 
   height: 400px;
-  width: 30%;
   margin-left: 5%
 }
 
@@ -168,8 +167,7 @@ body {
     top: 70px;
 }
 .googleMap{
-  float: right;
+  float: left;
 height: 400px;
-width: 60%;
 
 }
