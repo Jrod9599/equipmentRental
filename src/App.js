@@ -9,7 +9,6 @@ import Contact from './Contact';
 import Banner from './banner';
 import GoogleMap from './GoogleMap';
 import StoreLocator from './StoreLocator'
-import Location from './Location';
 import Footer from './footer'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import ThumbContainer from "./thumbContainer";
@@ -23,18 +22,19 @@ class App extends Component {
             <Router>
                 <div className="App">
                     <Route path="/" component={BootstrapNavBar}/>
-                    <Route exact path="/" component={Banner}/>
-
-                    <div className={'container '}>
-                    <Route exact path="/" component={ThumbContainer}/>
-                    <Route exact path="/locations" component={StoreLocator} />
-                    <Route exact path="/locations" component={GoogleMap} />
-                    <Route exact path="/login" component={Login}/>
-                    <Route exact path="/register" component={Register}/>
-                    <Route exact path="/contact" component={Contact}/>
-                    <Route path={'/product/:productid'} component={ItemPage}/>
-                </div>
-                    <Route component={Footer}/>
+                    <div className="pulldown">
+                      <Route exact path="/" component={Banner}/>
+                      <div className='container'>
+                        <Route exact path="/" component={ThumbContainer}/>
+                        <Route exact path="/locations" component={StoreLocator} />
+                        <Route exact path="/locations" component={GoogleMap} />
+                        <Route exact path="/login" component={Login}/>
+                        <Route exact path="/register" component={Register}/>
+                        <Route exact path="/contact" component={Contact}/>
+                        <Route path={'/product/:productid'} component={ItemPage}/>
+                      </div>
+                      <Route component={Footer}/>
+                    </div>
 
                 </div>
             </Router>

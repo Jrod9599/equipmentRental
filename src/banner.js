@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 class Banner extends Component{
  render(){
  	return(
- 		<div id="myCarousel" className="carousel slide" data-ride="carousel">
+ 		<div id="myCarousel" className="carousel slide row" data-ride="carousel">
 
   <ol className="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
@@ -22,18 +22,18 @@ class Banner extends Component{
     </div>
 
     <div className="item">
-      <img className="bannerImages" src="https://www.worx.com/media/wysiwyg/worx-chainsaws.1485355743.jpg" alt="garden tiller" />
+      <img className="bannerImages" src="http://img.directindustry.com/images_di/photo-g/121193-10234306.jpg" alt="garden tiller" />
         <div className="carousel-caption">
-          <h3>Garden Tiller Rental</h3>
-          <p>shining garden</p>
+          <h3>Floor Polisher</h3>
+          <p>shining floors</p>
         </div>
     </div>
 
     <div className="item">
-      <img className="bannerImages" src="https://i.ytimg.com/vi/otaMj_L946g/maxresdefault.jpg" alt="cultivators" />
+      <img className="bannerImages" src="https://s5.sywcdn.net/getImage?url=http%3A%2F%2Fc.shld.net%2Frpx%2Fi%2Fs%2Fi%2Fspin%2Fimage%2Fspin_prod_241026301&t=Product&w=1500&h=1500&qlt=100&mrg=1&str=1&s=f04b3f85a6d2b79608985638d6a9be5c" alt="cultivators" />
         <div className="carousel-caption">
-          <h3>Cultivator</h3>
-          <p>outdoor power garden tiller</p>
+          <h3>Electric Reciprocating Saw</h3>
+          <p>portable saws</p>
         </div>
     </div>
   </div>
