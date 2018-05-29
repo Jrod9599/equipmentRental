@@ -98,7 +98,6 @@
     top: 13%;
     right: 49%;
 }
-
 .bannerImages{
     max-height: 500px;
     margin: auto;
@@ -109,4 +108,15 @@
   position: relative;
   text-align: center;
   width: 100%;
+}
+
+#map {
+  height: 100%;
+}
+
+.storeLocator{
+  float: left;
+  height: 400px;
+  width: 30%;
+  margin-left: 5%
 }
