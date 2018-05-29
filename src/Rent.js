@@ -7,7 +7,7 @@ class Rent extends Component{
   constructor(){
   	super();
   	this.state = {
-        usStates: <select id={'state'}>
+        usStates: <select className="form-control" id={'state'}>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
             <option value="AZ">Arizona</option>

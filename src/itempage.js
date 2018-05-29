@@ -12,6 +12,7 @@ class ItemPage extends Component {
             product: []
 
         }
+        this.handleRentMe = this.handleRentMe.bind(this)
 
     }
 
@@ -31,6 +32,33 @@ class ItemPage extends Component {
         })
 
     }
+
+    handleRentMe() {
+        console.log('sanity check')
+
+        const total = this.state.product.price * 7;
+        const entry = {
+            'name': 'somename',
+            'total': total,
+            'icon': this.state.product.thumb
+        }
+
+        let tempcart = {}
+
+        if (localStorage.getItem('myCart')) {
+            tempcart = JSON.parse(localStorage.getItem('myCart'));
+
+
+        }
+
+        console.log(tempcart)
+
+        tempcart[Math.random()] = entry
+
+        localStorage.setItem('myCart', JSON.stringify(tempcart))
+        console.log(JSON.parse(localStorage.getItem('myCart')))
+    }
+
 
     render() {
 
@@ -54,15 +82,16 @@ class ItemPage extends Component {
 
                                 </div>
                                 <div className={'form-group col-md-5'}>
-                                        <label htmlFor="to">To: </label>
-                                        <input type={'date'} id={'to'}/>
-
+                                    <label htmlFor="to">To: </label>
+                                    <input type={'date'} id={'to'}/>
 
 
                                 </div>
                                 <div className={'col-md-2'}>
 
-                                    <button type="button" className="btn btn-primary navbar-btn">rent me</button>
+                                    <button type="button" onClick={this.handleRentMe}
+                                            className="btn btn-primary navbar-btn">rent me
+                                    </button>
 
                                 </div>
 
