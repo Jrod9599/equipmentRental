@@ -10,10 +10,10 @@ class Rent extends Component{
 
   render(){
     return(
-      <div className="container crent">
-        <h1>Rent Item</h1>
+      <div className="container crent rentForm">
         <form className="rent">
-            <div className="rentform"> 
+          <h1>Rent Item</h1>
+            <div> 
               <div className="col-lg-6"> 
                 <h3>Billing Information</h3>
                 <div>
