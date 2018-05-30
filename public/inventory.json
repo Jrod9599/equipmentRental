@@ -10,7 +10,7 @@
       },
       "67890": {
         "name":"saw",
-        "loc": "/assets/images/chainsaw.jpg",
+        "loc": "/assets/images/chainsaw.png",
         "thumb": "/assets/thumbnail/chainsaw_tn.jpg",
         "price": 12.75,
         "details":"kill that tree you really hate. You know the one."
