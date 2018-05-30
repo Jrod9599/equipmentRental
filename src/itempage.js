@@ -41,13 +41,17 @@ class ItemPage extends Component {
         let firstDate = new Date(this.refs.from.value);
         let secondDate = new Date(this.refs.to.value);
 
-        console.log(this.refs.from.value);
+        console.log(firstDate);
 
         if (firstDate == 'Invalid Date' || secondDate == 'Invalid Date') {
             alert('please input a valid date')
             return
         }
         const diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime()) / (oneDay)));
+
+        firstDate = firstDate.toLocaleDateString();
+        secondDate = secondDate.toLocaleDateString();
+
 
 
         const total = this.state.product.price * diffDays;

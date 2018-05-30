@@ -20,7 +20,9 @@
         "name":"mower",
         "loc": "/assets/images/carpetcleaning.jpg",
         "thumb": "/assets/thumbnail/carpetcleaning_tn.jpg",
-        "price":10.75
+        "price":10.75,
+        "details":"Cut your grass low and watch for snakes."
+
       },
       "1002": {
         "name":"vacuum",
