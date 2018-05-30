@@ -100,7 +100,7 @@ class ItemPage extends Component {
         today = yyyy+'-'+mm+'-'+dd;
         return (<div className={'row'}>
 
-                <div className={'col-md-6'}>
+                <div className={'col-md-6 col-xs-10'}>
 
                     <img src={this.state.product.loc} alt={'notfound'} width={'300px'}/>
                     <ul className="item name">
@@ -138,7 +138,7 @@ class ItemPage extends Component {
                     </ul>
 
                 </div>
-                <div className={'col-md-6'}>
+                <div className={'col-md-6 col-xs-10'}>
                     <GoogleMap/>
                 </div>
 

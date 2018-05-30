@@ -38,6 +38,13 @@
         "thumb": "/assets/thumbnail/sawthing_tn.jpg",
         "price": 15.75,
         "details":"Safe on wood floors."
+      },
+      "1004": {
+        "name":"nail",
+        "loc": "/assets/images/hammer.jpg",
+        "thumb": "/assets/thumbnail/hammer_tn.jpg",
+        "price": 17.75,
+        "details":"I have a nail and another nail to nail it in with."
       }
     }
   }

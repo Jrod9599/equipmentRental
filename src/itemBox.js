@@ -16,8 +16,8 @@ class ItemBox extends Component{
                 <Link to={`product/${this.props.id}`} >
                     <img className={'item-box'} src={this.props.entry.thumb} alt={'image not found'}/>
                 </Link>
-                <h3>price:   {this.props.entry.price}</h3>
-                <h3>info:  info stuff</h3>
+                <h3>price:   ${this.props.entry.price}<span className={'per-day'}>/day</span></h3>
+                <h3>info:  information about the product</h3>
             </div>
 
 
