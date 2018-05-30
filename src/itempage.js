@@ -36,26 +36,33 @@ class ItemPage extends Component {
     handleRentMe() {
         console.log('sanity check')
 
-        const oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+        const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+
         let firstDate = new Date(this.refs.from.value);
 
         let secondDate = new Date(this.refs.to.value);
 
+        console.log(firstDate)
+        console.log(secondDate)
 
-        const diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
 
-        firstDate=firstDate.toLocaleDateString();
-        secondDate=secondDate.toLocaleDateString();
+        if (firstDate == 'Invalid Date' || secondDate == 'Invalid Date') {
+            alert('please input a valid date')
+            return
+        }
+        const diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime()) / (oneDay)));
+
+        firstDate = firstDate.toLocaleDateString();
+        secondDate = secondDate.toLocaleDateString();
 
         console.log(diffDays)
 
 
-
         const total = this.state.product.price * diffDays;
         const entry = {
-            'name': 'somename',
-            'from':firstDate,
-            'to':secondDate,
+            'name': this.state.product.name,
+            'from': firstDate,
+            'to': secondDate,
             'total': total,
             'icon': this.state.product.thumb
         }
@@ -95,7 +102,7 @@ class ItemPage extends Component {
                         <li className="list-group-item">{this.state.product.name}</li>
                         <li className="list-group-item">{this.state.product.price}</li>
                         <li className="list-group-item">{this.state.product.details}</li>
-<br/>
+                        <br/>
                         <form>
                             <div className={'form-row'}>
 
