@@ -6,8 +6,6 @@ class Banner extends Component{
  	return(
  		<div id="myCarousel" className="carousel slide row" data-ride="carousel">
 
-
-
   <div className="carousel-inner">
     <div className="item active">
         <div>

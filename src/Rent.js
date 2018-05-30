@@ -61,11 +61,14 @@ class Rent extends Component{
             <option value="WY">Wyoming</option>
         </select>
     }
+    this.handleSubmit= this.handleSubmit.bind(this)
 
   }
 
   handleSubmit(event){
     event.preventDefault();
+    localStorage.setItem('myCart',null)
+
     this.props.history.push("/approved");
   }
 

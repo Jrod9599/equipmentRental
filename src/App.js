@@ -16,10 +16,15 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import ThumbContainer from "./thumbContainer";
 import ItemPage from "./itempage";
 import Locations from './Locations'
+import Cart from './Cart'
 
 
 
 class App extends Component {
+    constructor(){
+        super()
+
+    }
 
 
     render() {
@@ -41,6 +46,7 @@ class App extends Component {
                       <Route exact path="/register" component={Register}/>
                       <Route exact path="/contact" component={Contact}/>
                       <Route exact path="/approved" component={Approved}/>
+                      <Route exact path="/cart" component={Cart}/>
 
                    </div>
                     <Route component={Footer}/>

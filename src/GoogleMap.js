@@ -27,7 +27,6 @@ const markers = stores.map(store=>{
             lat:33.8660582,
             lng:-84.5737936
           }}>
-          
             <Marker
             position={{ lat:33.8660582,
             lng:-84.5737936}} />

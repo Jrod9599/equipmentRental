@@ -131,6 +131,12 @@ body {
   .footer {
     top: 17em;
   }
+
+  .panel{
+    position: relative;
+    margin-left: 3.95%;
+  }
+ 
 }
 /*$$$$$$$$$$$$$$$$ Banner $$$$$$$$$$$$$$$$$$$$$$$*/
 .carousel-caption{
@@ -142,6 +148,14 @@ body {
 .bannerImages{
     max-height: 500px;
     margin: auto;
+}
+.item-box{
+    width:auto;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+
 }
 
 /*$$$$$$$$$$$$$$$$ Footer $$$$$$$$$$$$$$$$$$$$$$$*/
@@ -156,10 +170,9 @@ body {
 }
 
 .storeLocator{
-  float: left;
+  float: right;
 
   height: 400px;
-  width: 30%;
   margin-left: 5%
 }
 
@@ -168,8 +181,18 @@ body {
     top: 70px;
 }
 .googleMap{
-  float: right;
+  float: left;
 height: 400px;
-width: 60%;
 
+}
+
+.picture {
+  width: 80%;
+}
+
+.itemInfo {
+  position: relative;
+  top: -100px;
+  left: 50%;
+  width: 50%;
 }

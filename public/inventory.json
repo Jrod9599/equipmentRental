@@ -2,29 +2,40 @@
   {
     "inventory": {
       "12345": {
-        "loc": "/assets/images/Futurama-Crew-Leela-Fry-and-Bender.jpg",
-        "thumb": "/assets/thumbnail/Futurama-Crew-Leela-Fry-and-Bender_tn.jpg",
-        "price": 3.50
+        "name":"hammer",
+        "loc": "/assets/images/lawnmower.jpg",
+        "thumb": "/assets/thumbnail/lawnmower_tn.jpg",
+        "price": 13.99,
+        "details":"use this hammer to cave your enemies skulls in"
       },
       "67890": {
-        "loc": "/assets/images/fonzy.jpg",
-        "thumb": "/assets/thumbnail/fonzy_tn.jpg",
-        "price": 3.75
+        "name":"saw",
+        "loc": "/assets/images/chainsaw.jpg",
+        "thumb": "/assets/thumbnail/chainsaw_tn.jpg",
+        "price": 12.75,
+        "details":"kill that tree you really hate. You know the one."
+
       },
       "1001": {
+        "name":"mower",
         "loc": "/assets/images/carpetcleaning.jpg",
         "thumb": "/assets/thumbnail/carpetcleaning_tn.jpg",
-        "price": 3.75
+        "price":10.75
       },
       "1002": {
+        "name":"vacuum",
         "loc": "/assets/images/steamer.jpg",
         "thumb": "/assets/thumbnail/steamer_tn.jpg",
-        "price": 3.75
+        "price": 14.75,
+        "details":"This vacuum has more suction power than your sad life sucks the happiness out of people"
+
       },
       "1003": {
+        "name":"steamer",
         "loc": "/assets/images/sawthing.jpg",
         "thumb": "/assets/thumbnail/sawthing_tn.jpg",
-        "price": 3.75
-      },
+        "price": 15.75,
+        "details":"Safe on wood floors."
+      }
     }
   }

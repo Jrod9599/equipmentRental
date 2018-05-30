@@ -12,7 +12,9 @@ class Login extends Component{
 	handleLogin(event){
 		event.preventDefault();
 		this.props.history.push("/");
-		localStorage.token = "sdfsdf";
+		localStorage.token = "asdasd";
+		localStorage.setItem('logged','true');
+		alert("Welcome");
 	}
 
   	render(){

@@ -45,6 +45,7 @@ class Register extends Component{
       //alert("You have been registered and logged in.");
       localStorage.token = "asdfj";
       this.props.history.push("/");
+      alert("Logging In");
   	}
   	else{
   		console.log("pwd dont match");

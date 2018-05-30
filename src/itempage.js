@@ -12,6 +12,7 @@ class ItemPage extends Component {
             product: []
 
         }
+        this.handleRentMe = this.handleRentMe.bind(this)
 
     }
 
@@ -32,6 +33,56 @@ class ItemPage extends Component {
 
     }
 
+    handleRentMe() {
+        console.log('sanity check')
+
+        const oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+        let firstDate = new Date(this.refs.from.value);
+
+        let secondDate = new Date(this.refs.to.value);
+
+
+        const diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
+
+        firstDate=firstDate.toLocaleDateString();
+        secondDate=secondDate.toLocaleDateString();
+
+        console.log(diffDays)
+
+
+
+        const total = this.state.product.price * diffDays;
+        const entry = {
+            'name': 'somename',
+            'from':firstDate,
+            'to':secondDate,
+            'total': total,
+            'icon': this.state.product.thumb
+        }
+
+        let tempcart = {}
+
+        if (localStorage.getItem('myCart')) {
+            tempcart = JSON.parse(localStorage.getItem('myCart'));
+
+
+        }
+
+        console.log(tempcart)
+
+        tempcart[Math.random()] = entry
+
+        localStorage.setItem('myCart', JSON.stringify(tempcart))
+        console.log(JSON.parse(localStorage.getItem('myCart')))
+
+        alert('added to cart')
+        console.log(this.props)
+        this.props.history.push('/')
+
+
+    }
+
+
     render() {
 
 
@@ -39,30 +90,31 @@ class ItemPage extends Component {
 
                 <div className={'col-md-6'}>
 
-                    <img src={this.state.product.loc} alt={'notfound'} width={'600px'}/>
+                    <img src={this.state.product.loc} alt={'notfound'} width={'300px'}/>
                     <ul className="item name">
-                        <li className="list-group-item">this is the name</li>
-                        <li className="list-group-item">this is the price</li>
-                        <li className="list-group-item">this is some other info</li>
-
+                        <li className="list-group-item">{this.state.product.name}</li>
+                        <li className="list-group-item">{this.state.product.price}</li>
+                        <li className="list-group-item">{this.state.product.details}</li>
+<br/>
                         <form>
                             <div className={'form-row'}>
 
                                 <div className={'form-group col-md-5'}>
                                     <label htmlFor="from">From: </label>
-                                    <input type={'date'} id={'from'}/>
+                                    <input type={'date'} id={'from'} ref={'from'}/>
 
                                 </div>
                                 <div className={'form-group col-md-5'}>
-                                        <label htmlFor="to">To: </label>
-                                        <input type={'date'} id={'to'}/>
-
+                                    <label htmlFor="to">To: </label>
+                                    <input type={'date'} id={'to'} ref={'to'}/>
 
 
                                 </div>
                                 <div className={'col-md-2'}>
 
-                                    <button type="button" className="btn btn-primary navbar-btn">rent me</button>
+                                    <button type="button" onClick={this.handleRentMe}
+                                            className="btn btn-primary navbar-btn">rent me
+                                    </button>
 
                                 </div>
 
