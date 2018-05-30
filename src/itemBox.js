@@ -1,6 +1,6 @@
 import React , {Component} from 'react';
-import {Link} from 'react-router-dom'
-
+import {Link} from 'react-router-dom';
+//import "./itemBox.css";
 
 class ItemBox extends Component{
     constructor(props){
@@ -11,12 +11,13 @@ class ItemBox extends Component{
     render(){
         console.log(this.props.entry)
         return(
-            <div className="col-xs-11 col-md-6 col-lg-4 panel panel-info">
+
+            <div className=" panel panel-info">
                 <Link to={`product/${this.props.id}`} >
-                    <img src={this.props.entry.thumb} alt={'image not found'}/>
+                    <img className={' item-box'} src={this.props.entry.thumb} alt={'image not found'}/>
                 </Link>
                 <h3>price:   {this.props.entry.price}</h3>
-                <h3>info: some item info stuff</h3>
+                <h3>info:  info stuff</h3>
             </div>
 
 
