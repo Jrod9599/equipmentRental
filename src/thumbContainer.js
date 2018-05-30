@@ -35,7 +35,7 @@ class ThumbContainer extends Component {
         let i = 0
         for (let key in this.state.inventory) {
 
-            thumbs.push(<div className={'col-sm-3'}><ItemBox id={key} entry={this.state.inventory[key]} key={i}/></div>)
+            thumbs.push(<div className={'col-md-6 col-lg-3  col-xs-11'}><ItemBox id={key} entry={this.state.inventory[key]} key={i}/></div>)
             i++
 
         }

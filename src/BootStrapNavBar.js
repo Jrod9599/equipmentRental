@@ -37,7 +37,7 @@ class BootstrapNavBar extends Component{
              <ul className="nav navbar-nav">
                 <li><Link to="/locations">Locations</Link></li> 
                 {
-                    loggedIn === undefined
+                    !loggedIn
                     ?
                   <li><Link to="/login">Login</Link></li>
                   :
