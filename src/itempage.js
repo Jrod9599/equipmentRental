@@ -37,12 +37,15 @@ class ItemPage extends Component {
         console.log('sanity check')
 
         const oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
-        const firstDate = new Date(this.refs.from.value);
+        let firstDate = new Date(this.refs.from.value);
 
-        const secondDate = new Date(this.refs.to.value);
+        let secondDate = new Date(this.refs.to.value);
 
 
         const diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
+
+        firstDate=firstDate.toLocaleDateString();
+        secondDate=secondDate.toLocaleDateString();
 
         console.log(diffDays)
 
