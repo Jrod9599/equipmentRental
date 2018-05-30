@@ -8,7 +8,7 @@ class StoreLocator extends Component{
 		return(
 			<div className="storeLocator">
 			<h2>STORE LOCATOR</h2>
-			<p>Simply enter your city and state, or zip code and click search. Rental service stores will pop up on the map. Click on one of the locations to see the address.</p>
+			<p>Simply enter your city and state, or zip code and click search. The closest rental service store will be shown at the buttom.</p>
 			<form>
 				ENTER YOUR LOCATION:
 				<LocationSearchInput />
