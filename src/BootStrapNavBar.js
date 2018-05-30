@@ -18,7 +18,7 @@ class BootstrapNavBar extends Component{
 
 	render(){
 
-    const loggedIn = localStorage.token
+    const loggedIn = localStorage.getItem('logged')
    return(
 <div className={'row'}>
      <nav className="navbar navbar-inverse navbar-fixed-top">
@@ -29,18 +29,18 @@ class BootstrapNavBar extends Component{
          <ul className="nav navbar-nav">
             <li><Link to="/locations">Locations</Link></li> 
             {
-              loggedIn === undefined
+              !loggedIn
               ?
             <li><Link to="/login">Login</Link></li>
             :
             <li><Link to="/logout" onClick={this.handleLogout}>Logout</Link></li>
             }
             {
-              loggedIn === undefined
+              !loggedIn
               ?
               <li><Link to="/register">Register</Link></li>
               :
-              <spam />
+                  <li>Welcome Customer</li>
             }
 		      	<li><Link to="/contact">Contact Us</Link></li>
             </ul>
