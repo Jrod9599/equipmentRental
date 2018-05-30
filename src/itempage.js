@@ -36,26 +36,18 @@ class ItemPage extends Component {
     handleRentMe() {
         console.log('sanity check')
 
-        const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
 
+        const oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
         let firstDate = new Date(this.refs.from.value);
-
         let secondDate = new Date(this.refs.to.value);
 
-        console.log(firstDate)
-        console.log(secondDate)
-
+        console.log(this.refs.from.value);
 
         if (firstDate == 'Invalid Date' || secondDate == 'Invalid Date') {
             alert('please input a valid date')
             return
         }
         const diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime()) / (oneDay)));
-
-        firstDate = firstDate.toLocaleDateString();
-        secondDate = secondDate.toLocaleDateString();
-
-        console.log(diffDays)
 
 
         const total = this.state.product.price * diffDays;
@@ -67,32 +59,43 @@ class ItemPage extends Component {
             'icon': this.state.product.thumb
         }
 
-        let tempcart = {}
 
-        if (localStorage.getItem('myCart')) {
-            tempcart = JSON.parse(localStorage.getItem('myCart'));
+            let tempcart = {}
+
+            if (localStorage.getItem('myCart')) {
+                tempcart = JSON.parse(localStorage.getItem('myCart'));
 
 
-        }
+            }
 
-        console.log(tempcart)
+            console.log(tempcart)
 
-        tempcart[Math.random()] = entry
+            tempcart[Math.random()] = entry
 
-        localStorage.setItem('myCart', JSON.stringify(tempcart))
-        console.log(JSON.parse(localStorage.getItem('myCart')))
+            localStorage.setItem('myCart', JSON.stringify(tempcart))
+            console.log(JSON.parse(localStorage.getItem('myCart')))
 
-        alert('added to cart')
-        console.log(this.props)
-        this.props.history.push('/')
-
+            alert('added to cart')
+            console.log(this.props)
+            this.props.history.push('/')
 
     }
 
 
     render() {
 
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1; //January is 0!
+        var yyyy = today.getFullYear();
+        if(dd<10){
+            dd='0'+dd
+        } 
+        if(mm<10){
+            mm='0'+mm
+        } 
 
+        today = yyyy+'-'+mm+'-'+dd;
         return (<div className={'row'}>
 
                 <div className={'col-md-6'}>
@@ -108,12 +111,12 @@ class ItemPage extends Component {
 
                                 <div className={'form-group col-md-5'}>
                                     <label htmlFor="from">From: </label>
-                                    <input type={'date'} id={'from'} ref={'from'}/>
+                                    <input type={'date'} min={today} id={'from'} ref={'from'}/>
 
                                 </div>
                                 <div className={'form-group col-md-5'}>
                                     <label htmlFor="to">To: </label>
-                                    <input type={'date'} id={'to'} ref={'to'}/>
+                                    <input type={'date'} min={today} id={'to'} ref={'to'}/>
 
 
                                 </div>

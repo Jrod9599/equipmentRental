@@ -39,7 +39,6 @@ class Cart extends Component {
         }
 
         this.props.history.push("/checkout");
-
     }
 
     handleRemove(event) {
