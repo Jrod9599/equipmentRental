@@ -44,7 +44,7 @@ class BootstrapNavBar extends Component{
                   <li><Link to="/logout" onClick={this.handleLogout}>Logout</Link></li>
                 }
                 {
-                  loggedIn === undefined
+                  !loggedIn
                   ?
                   <li><Link to="/register">Register</Link></li>
                   :
