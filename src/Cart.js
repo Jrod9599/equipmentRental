@@ -30,6 +30,11 @@ class Cart extends Component{
 
 	handleSubmit(event){
 		event.preventDefault();
+
+		if(!localStorage.getItem('logged')){
+		    alert('You must be logged in to checkout')
+            return
+        }
 		
 		this.props.history.push("/checkout");
 

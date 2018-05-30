@@ -51,6 +51,8 @@ class ItemPage extends Component {
         const total = this.state.product.price * diffDays;
         const entry = {
             'name': 'somename',
+            'from':firstDate,
+            'to':secondDate,
             'total': total,
             'icon': this.state.product.thumb
         }
@@ -87,10 +89,10 @@ class ItemPage extends Component {
 
                     <img src={this.state.product.loc} alt={'notfound'} width={'300px'}/>
                     <ul className="item name">
-                        <li className="list-group-item">this is the name</li>
-                        <li className="list-group-item">this is the price</li>
-                        <li className="list-group-item">this is some other info</li>
-
+                        <li className="list-group-item">{this.state.product.name}</li>
+                        <li className="list-group-item">{this.state.product.price}</li>
+                        <li className="list-group-item">{this.state.product.details}</li>
+<br/>
                         <form>
                             <div className={'form-row'}>
 
