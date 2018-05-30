@@ -18,6 +18,8 @@ import ItemPage from "./itempage";
 import Locations from './Locations'
 import Cart from './Cart'
 
+
+
 class App extends Component {
     constructor(){
         super()
