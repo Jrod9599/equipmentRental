@@ -19,7 +19,7 @@ class BootstrapNavBar extends Component{
 
 	render(){
 
-    const loggedIn = localStorage.getItem('logged')
+    const loggedIn = localStorage.token
    return(
 <div className={'row'}>
      <nav className="navbar navbar-inverse navbar-fixed-top">
