@@ -36,48 +36,52 @@ class ItemPage extends Component {
     handleRentMe() {
         console.log('sanity check')
 
-        const oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
-        let firstDate = new Date(this.refs.from.value);
 
-        let secondDate = new Date(this.refs.to.value);
+        
+            const oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+            let firstDate = new Date(this.refs.from.value);
+            console.log(this.refs.from.value);
 
-
-        const diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
-
-        firstDate=firstDate.toLocaleDateString();
-        secondDate=secondDate.toLocaleDateString();
-
-        console.log(diffDays)
+            let secondDate = new Date(this.refs.to.value);
 
 
+            const diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
 
-        const total = this.state.product.price * diffDays;
-        const entry = {
-            'name': 'somename',
-            'from':firstDate,
-            'to':secondDate,
-            'total': total,
-            'icon': this.state.product.thumb
-        }
+            firstDate=firstDate.toLocaleDateString();
+            secondDate=secondDate.toLocaleDateString();
 
-        let tempcart = {}
-
-        if (localStorage.getItem('myCart')) {
-            tempcart = JSON.parse(localStorage.getItem('myCart'));
+            console.log(diffDays)
 
 
-        }
 
-        console.log(tempcart)
+            const total = this.state.product.price * diffDays;
+            const entry = {
+                'name': 'somename',
+                'from':firstDate,
+                'to':secondDate,
+                'total': total,
+                'icon': this.state.product.thumb
+            }
 
-        tempcart[Math.random()] = entry
+            let tempcart = {}
 
-        localStorage.setItem('myCart', JSON.stringify(tempcart))
-        console.log(JSON.parse(localStorage.getItem('myCart')))
+            if (localStorage.getItem('myCart')) {
+                tempcart = JSON.parse(localStorage.getItem('myCart'));
 
-        alert('added to cart')
-        console.log(this.props)
-        this.props.history.push('/')
+
+            }
+
+            console.log(tempcart)
+
+            tempcart[Math.random()] = entry
+
+            localStorage.setItem('myCart', JSON.stringify(tempcart))
+            console.log(JSON.parse(localStorage.getItem('myCart')))
+
+            alert('added to cart')
+            console.log(this.props)
+            this.props.history.push('/')
+
 
 
     }
@@ -85,7 +89,18 @@ class ItemPage extends Component {
 
     render() {
 
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1; //January is 0!
+        var yyyy = today.getFullYear();
+        if(dd<10){
+            dd='0'+dd
+        } 
+        if(mm<10){
+            mm='0'+mm
+        } 
 
+        today = yyyy+'-'+mm+'-'+dd;
         return (<div className={'row'}>
 
                 <div className={'col-md-6'}>
@@ -101,12 +116,12 @@ class ItemPage extends Component {
 
                                 <div className={'form-group col-md-5'}>
                                     <label htmlFor="from">From: </label>
-                                    <input type={'date'} id={'from'} ref={'from'}/>
+                                    <input type={'date'} min={today} id={'from'} ref={'from'}/>
 
                                 </div>
                                 <div className={'form-group col-md-5'}>
                                     <label htmlFor="to">To: </label>
-                                    <input type={'date'} id={'to'} ref={'to'}/>
+                                    <input type={'date'} min={today} id={'to'} ref={'to'}/>
 
 
                                 </div>
