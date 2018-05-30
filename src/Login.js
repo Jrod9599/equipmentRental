@@ -13,6 +13,7 @@ class Login extends Component{
 		event.preventDefault();
 		this.props.history.push("/");
 		localStorage.token = "sdfsdf";
+		alert("Logging In");
 	}
 
   	render(){
