@@ -131,6 +131,12 @@ body {
   .footer {
     top: 17em;
   }
+
+  .panel{
+    position: relative;
+    margin-left: 3.95%;
+  }
+ 
 }
 /*$$$$$$$$$$$$$$$$ Banner $$$$$$$$$$$$$$$$$$$$$$$*/
 .carousel-caption{
