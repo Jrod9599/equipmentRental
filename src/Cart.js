@@ -51,9 +51,16 @@ class Cart extends Component{
 		const items = keys.map((x)=>{
 			return (
 
-					<div className="item">
-						<img width="200px"src={tempcart[x].icon} />
-						Item: {tempcart[x].name} Price: {tempcart[x].total}
+					<div className="item col-md-4">
+						<div className="picture">
+							<img width="200px"src={tempcart[x].icon} />
+						</div>
+						<div className="itemInfo">
+							Item: {tempcart[x].name} 
+							<br/>
+							Price: {tempcart[x].total}
+						</div>
+						
 					</div>
 
 				)
@@ -63,10 +70,14 @@ class Cart extends Component{
 	    return(
 	    	<div>
 	    		<h2>Items</h2>
-	    		{items}
-	    		<hr/>
-	    		<h2>Total: {this.state.total}</h2>
-	    		<button type="submit" onClick={this.handleSubmit} className="btn btn-primary">CheckOut</button>
+	    		<div>
+	    			{items}
+	    		</div>
+	    		<div className="col-md-12">
+	    			<hr/>
+	    			<h2>Total: {this.state.total}</h2>
+	    			<button type="submit" onClick={this.handleSubmit} className="btn btn-primary">CheckOut</button>
+	    		</div>
 	    	</div>
 	    ) 
 	  }

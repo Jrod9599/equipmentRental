@@ -171,3 +171,14 @@ body {
 height: 400px;
 
 }
+
+.picture {
+  width: 80%;
+}
+
+.itemInfo {
+  position: relative;
+  top: -100px;
+  left: 50%;
+  width: 50%;
+}
