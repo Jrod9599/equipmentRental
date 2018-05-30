@@ -64,6 +64,10 @@ class Cart extends Component{
 							Item: {tempcart[x].name} 
 							<br/>
 							Price: {tempcart[x].total}
+							<br/>
+							From: {tempcart[x].from}
+							<br/>
+							To: {tempcart[x].to}
 						</div>
 						
 					</div>
