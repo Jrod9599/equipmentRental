@@ -41,7 +41,7 @@ class ItemPage extends Component {
         let firstDate = new Date(this.refs.from.value);
         let secondDate = new Date(this.refs.to.value);
 
-        console.log(this.refs.from.value);
+        console.log(firstDate);
 
         if (firstDate == 'Invalid Date' || secondDate == 'Invalid Date') {
             alert('please input a valid date')
@@ -86,10 +86,10 @@ class ItemPage extends Component {
 
     render() {
 
-        var today = new Date();
-        var dd = today.getDate();
-        var mm = today.getMonth()+1; //January is 0!
-        var yyyy = today.getFullYear();
+        let today = new Date();
+        let dd = today.getDate();
+        let mm = today.getMonth()+1; //January is 0!
+        let yyyy = today.getFullYear();
         if(dd<10){
             dd='0'+dd
         } 
@@ -100,7 +100,7 @@ class ItemPage extends Component {
         today = yyyy+'-'+mm+'-'+dd;
         return (<div className={'row'}>
 
-                <div className={'col-md-6'}>
+                <div className={'col-md-6 col-xs-10'}>
 
                     <img src={this.state.product.loc} alt={'notfound'} width={'300px'}/>
                     <ul className="item name">
@@ -138,7 +138,7 @@ class ItemPage extends Component {
                     </ul>
 
                 </div>
-                <div className={'col-md-6'}>
+                <div className={'col-md-6 col-xs-10'}>
                     <GoogleMap/>
                 </div>
 

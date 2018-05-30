@@ -9,10 +9,10 @@ function Locations(){
 	return(
 		<div className="locations container">
 			 <div className={'row'}>
-				<div className={'col-md-6'}>
+				<div className={'col-md-6  col-xs-10'}>
                     <StoreLocator />
 				</div>
-				<div className={'col-md-6'}>
+				<div className={'col-md-6 col-xs-10'}>
                     <GoogleMap />
 				</div>
 			</div>
