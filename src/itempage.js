@@ -49,6 +49,8 @@ class ItemPage extends Component {
         }
         const diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime()) / (oneDay)));
 
+        firstDate = firstDate.toLocaleDateString();
+        secondDate = secondDate.toLocaleDateString();
 
         const total = this.state.product.price * diffDays;
         const entry = {
